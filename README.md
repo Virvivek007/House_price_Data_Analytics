@@ -60,34 +60,12 @@ House_Price_Prediction/
   - Example Values
   - Business / Domain Relevance
 
-| Column Name | Data Type | Example | Description |
-|---|---|---|---|
-| `Id` | Integer | 1, 2, 3 | Unique identifier for each house |
-| `LotArea` | Integer | 8450 | Lot size in square feet |
-| `Neighborhood` | String | CollgCr | Physical location within city |
-| `YearBuilt` | Integer | 2003 | Original construction year |
-| `OverallQual` | Integer | 7 | Overall material and finish quality (1–10) |
-| `TotalBsmtSF` | Float | 856.0 | Total square feet of basement area |
-| `GrLivArea` | Integer | 1710 | Above-grade living area in sq. ft. |
-| `BedroomAbvGr` | Integer | 3 | Number of bedrooms above basement |
-| `GarageCars` | Float | 2.0 | Garage capacity in car units |
-| `SalePrice` | Integer | 208500 | Target variable — property sale price (USD) |
-
-> 📄 Full data dictionary available in [`docs/data_dictionary.md`](docs/data_dictionary.md)
 
 ---
 
 ### Step 2 — Data Quality Assessment
 
 Initial profiling revealed the following issues:
-
-| Issue | Columns Affected | Count |
-|---|---|---|
-| Missing Values | `LotFrontage`, `GarageType`, `MasVnrArea` & more | ~19 columns |
-| Duplicate Rows | — | 0 |
-| Inconsistent Formatting | `MoSold` (numeric month vs. name) | 1 column |
-| Outliers Detected | `GrLivArea`, `LotArea`, `SalePrice` | 3 columns |
-| Incorrect Data Types | `MSSubClass` stored as int, should be categorical | 1 column |
 
 **Quick profiling code used:**
 ```python
@@ -106,20 +84,7 @@ print(f"\nStatistical Summary:\n{df.describe()}")
 
 ### Step 3 — Data Cleaning & Transformation
 
-The following cleaning operations were applied:
 
-#### 🔧 Handling Missing Values
-```python
-# Numerical columns — fill with median
-num_cols = ['LotFrontage', 'MasVnrArea', 'GarageYrBlt']
-for col in num_cols:
-    df[col].fillna(df[col].median(), inplace=True)
-
-# Categorical columns — fill with 'None' (no feature present)
-cat_cols = ['Alley', 'BsmtQual', 'FireplaceQu', 'GarageType', 'PoolQC', 'Fence']
-for col in cat_cols:
-    df[col].fillna('None', inplace=True)
-```
 
 #### 🔧 Removing Outliers
 ```python
@@ -155,19 +120,6 @@ df.to_csv('data/cleaned_dataset.csv', index=False)
 print(f"Clean dataset saved! Shape: {df.shape}")
 ```
 
----
-
-## 📦 Deliverables
-
-| Deliverable | Status | Location |
-|---|---|---|
-| ✅ Data Dictionary | Completed | `docs/data_dictionary.md` |
-| ✅ Cleaning Script | Completed | `scripts/cleaning_script.py` |
-| ✅ Cleaned Dataset | Completed | `data/cleaned_dataset.csv` |
-| ✅ Jupyter Notebook | Completed | `notebooks/data_wrangling.ipynb` |
-| 🎥 LinkedIn Video | In Progress | 3-5 min walkthrough |
-
----
 
 ## 🛠️ Tools & Technologies
 
@@ -216,7 +168,7 @@ jupyter notebook notebooks/data_wrangling.ipynb
 **[Vivek Kumar Tiwari]**
 Data Analytics Intern — ApexPlanet Software Pvt. Ltd.
 📧 vkt.vivek007@gmail.com
-🔗 [LinkedIn](https://linkedin.com/in/yourprofile) | [GitHub](https://github.com/Virvivek007/)
+🔗 [LinkedIn](https://linkedin.com/in/vkt16/) | [GitHub](https://github.com/Virvivek007/)
 
 ---
 
