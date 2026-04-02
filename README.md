@@ -14,7 +14,7 @@ This repository documents  of the Data Analytics Internship at **ApexPlanet Soft
 
 The goal is to master the foundational step of any data analytics pipeline — **Data Immersion & Wrangling** — using a House Price Prediction dataset. This involves acquiring, understanding, cleaning, and transforming raw data into an analysis-ready format.
 
-> **Timeline:** 10 Days | **Task:** Data Immersion & Wrangling
+
 
 ---
 
