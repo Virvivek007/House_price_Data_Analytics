@@ -10,7 +10,7 @@
 
 ## 📌 About This Project
 
-This repository documents **Week 1 – Task 1** of the Data Analytics Internship at **ApexPlanet Software Pvt. Ltd.**
+This repository documents  of the Data Analytics Internship at **ApexPlanet Software Pvt. Ltd.**
 
 The goal is to master the foundational step of any data analytics pipeline — **Data Immersion & Wrangling** — using a House Price Prediction dataset. This involves acquiring, understanding, cleaning, and transforming raw data into an analysis-ready format.
 
